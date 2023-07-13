@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML and CSS full course video : 1</title>
+</head>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: fontfamily;
+    src: url(/oraden-naloch-demo.regular.ttf);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+
+  }
+
+  .navbar img {
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 15px;
+
+  }
+  .navbar img:hover{
+    border: 2px solid white ;
+  }
+
+  .lists a {
+
+    color: black;
+    padding: 15px;
+    margin: 12px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: fontfamily;
+  }
+
+  .lists a:hover {
+    background-color: black;
+    color: white;
+
+  }
+
+  .lists .active {
+    background-color: black;
+    color: white;
+  }
+
+
+
+  .imgs a {
+    color: white;
+    padding: 15px;
+    margin-right: 15px;
+    color: brown;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+
+  .imgs a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .openbtn {
+    display: none;
+  }
+
+  .heading-container {
+    text-align: center;
+    background-image: url(/imgs/pexels-daian-gan-102129.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 35px;
+    font-family: fontfamily;
+    padding: 150px;
+    font-weight: 700;
+  }
+
+  .heading-container h1,
+  .tag-line,
+  .introduction  {
+    background: linear-gradient(to right, blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  
+
+
+
+
+
+  @media screen and (max-width:728px) {
+   
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: aqua;
+      border-radius: 25px;
+
+
+    }
+
+    .navbar img {
+      width: 50px;
+      height: 50px;
+      background-color: blueviolet;
+      border-radius: 15px;
+    }
+
+    .lists,
+    .imgs {
+      display: none;
+    }
+
+    .dropdown {
+      position: fixed;
+      width: 0;
+      top: 0;
+      transition: 0.5s;
+      overflow: hidden;
+      background-color: lightskyblue;
+      display: block;
+    }
+
+    .dropdown a {
+      color: green;
+      display: flex;
+      overflow: hidden;
+      padding: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+
+    }
+
+    .dropdown a:hover {
+      background-color: white;
+      color: black;
+      text-decoration: underline;
+    }
+
+
+
+    .openbtn {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      display: block;
+      background-color: black;
+      color: beige;
+      border: none;
+      padding: 3px 7px;
+      border-radius: 15px;
+    }
+
+
+  }
+
+  @media screen and (max-width:580px) {
+  
+  .heading-container {
+    padding: 73px;
+    font-size: 18px;
+    border-radius: 25px;
+    background-position-y: center;
+
+  }
+    
+
+    
+  }
+  @media screen and (max-width:300px) {
+   
+    .heading-container{
+      padding: 36px;
+      font-size: 9px ;
+      
+      
+    }
+    
+    
+  }
+</style>
+
+<body>
+
+
+  <div class="navbar">
+    <img src="/imgs/mainlogo-for-website-removebg-preview.png" alt="">
+
+    <div class="lists">
+      <a href="" class="active">
+        Home
+      </a>
+      <a href="">
+        Produts
+      </a>
+      <a href="">
+        Services
+      </a>
+      <a href="">
+        Contact Us
+      </a>
+    </div>
+    <div class="imgs">
+      <a href="">&times;</a>
+      <a href="">&times;</a>
+      <a href="">&times;</a>
+    </div>
+
+    <div class="dropdown" id="myDropdown">
+      <a href="javascript:void(0);" onclick="closeNav();">
+        close
+      </a>
+
+      <a href="">
+        Home
+      </a>
+      <a href="">
+        Products
+      </a>
+      <a href="">
+        Services
+      </a>
+      <a href="">
+        Contact Us
+      </a>
+    </div>
+  </div>
+  <div>
+    <button class="openbtn" onclick="openNav();">
+      Open btn
+    </button>
+  </div>
+
+
+  <main class="heading-container">
+    <h1><u>ALPHA 26</u></h1>
+    <p class="tag-line"> it's Simple</p>
+    <p class="introduction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, non?</p>
+
+    <div></div>For more <button class="For-more-button">Click here</button></div>
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+  <script>
+
+    function openNav() {
+      document.querySelector('#myDropdown').style.width = '250px';
+    }
+
+    function closeNav() {
+      document.querySelector('#myDropdown').style.width = '0';
+    }
+
+
+
+  </script>
+</body>
+
+</html>
